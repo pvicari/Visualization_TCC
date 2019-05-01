@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Visualização TCC</title>
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet"
+        media="screen,projection" />
+
+</head>
+
+<body>
+
+    <div id="global">
+        <div id="topo">
+            <h1>Visualização TCC</h1>
+        </div>
+        <!--fim div topo-->
+        <div id="control-container">
+            <div id="date-container">
+                <label for="date-horizon1">Data :</label>
+                <input id="date-horizon1" type="date"/ min="2019-01-01">
+            </div>
+            <!--fim date-container-->
+            <div id="sensor-container">
+                <label for="sensor-horizon1">Sensor :</label>
+                
+                <input type="checkbox" id="chk-temp1" value="temp1">Temperatura 1</input>
+                <input type="checkbox" id="chk-temp2" value="temp2">Temperatura 2</input>
+                <input type="checkbox" id="chk-temp3" value="temp3">Temperatura 3</input>
+                <input type="checkbox" id="chk-umi1" value="umi1">Umidade 1</input>
+                <input type="checkbox" id="chk-umi2" value="umi2">Umidade 2</input>
+                <input type="checkbox" id="chk-umi3" value="umi3">Umidade 3</input>
+                
+            </div>
+            <!--fim sensor-container-->
+            <div id="button-carrega-container">
+                <button id="carrega" onClick="carrega()" )>Executar</button>
+            </div>
+            <!--fim button-executa-container-->
+            <div id="button-executa-container">
+                <button id="executa-btn" onClick="start()" disabled="true" )>Executa</button>
+            </div>
+            <!--fim button-executa-container-->
+        </div>
+        <!--fim control-container-->
+    </div><!--fim global container-->
+    <div id="render">
+            
+    </div>
+
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://d3js.org/d3.v2.min.js" charset="utf-8"></script>
+    <script src="https://square.github.io/cubism/cubism.v1.min.js"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='js/d3.v5.min.js') }}"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/horizon.js') }}"></script>
+
+</body>
+
+</html>

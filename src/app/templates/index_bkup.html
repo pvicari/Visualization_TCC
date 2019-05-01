@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Visualização TCC</title>
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body>
+
+    <div id="global">
+        <div id="topo">
+            <h1>Visualização TCC</h1>
+        </div>
+        <!--fim div topo-->
+        <div class="body-container">
+            <!--<div id="div-menu">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">O que fazemos?</a>
+                            <ul>
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">Design</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>-->
+            <!--fim div menu-->
+            <div id="conteudo-footer-container">
+                <div id="conteudo">
+                    <div id="data-container">
+                        <div id="input-container">
+                            <div id="date-container">
+                                <label for="date-horizon1">Data :</label>
+                                <input id="date-horizon1" type="date"/ min="2019-01-01">
+                            </div>
+                            <div id="sensor-container">
+                                <label for="date-horizon1">Sensor :</label>
+                                <select id="sensor-horizon1">
+                                    <option value="temp1">Temperatura 1</option>
+                                    <option value="temp2">Temperatura 2</option>
+                                    <option value="temp3">Temperatura 3</option>
+                                    <option value="umi1">Umidade 1</option>
+                                    <option value="umi2">Umidade 2</option>
+                                    <option value="umi3">Umidade 3</option>
+                                    <option value="luz1">Luz 1</option>
+                                    <option value="luz2">Luz 2</option>
+                                    <option value="luz3">Luz 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--fim input-container-->
+                        <div id="horizon-container">
+                            <div id="horizon-chart"></div>
+                        </div>
+                        <!--fim horizon-container-->
+                        <div id="button-executa-container">
+                        <button id="plota" onClick="start()" )>Executa</button>
+                    </div><!--fim button-executa-container-->
+                    </div>
+                    <!--fim data-container-->
+
+                </div>
+                <!--fim div conteudo-->
+                <footer>
+                    <p>Desenvolvido por Pedro Vicari</p>
+                </footer>
+            </div>
+            <!--fim conteudo-footer-container-->
+        </div>
+        <!--fim div body-container-->
+    </div>
+    <!--fim div global-->
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://d3js.org/d3.v2.min.js" charset="utf-8"></script>
+    <script src="https://square.github.io/cubism/cubism.v1.min.js"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='js/d3.v5.min.js') }}"></script>-->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/horizon.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Visualização TCC</title>
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet"
+        media="screen,projection" />
+
+    <style type="text/css">
+        #render {
+            max-width: 800px;
+            height: 400px;
+            margin: 1em auto;
+        }
+
+        .highcharts-series-hover path {
+            stroke: rgb(255, 66, 66);
+            stroke-width: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="global">
+        <div id="topo">
+            <h1>Visualização TCC</h1>
+        </div>
+        <!--fim div topo-->
+        <div id="control-container">
+            <div id="date-container">
+                <label for="date-parallel">Data :</label>
+                <input id="date-parallel" type="date" min="2019-01-01">
+            </div>
+            <div id="button-executa-container">
+                <button id="executa-btn" onClick="executa_parallel()">Executa</button>
+            </div>
+            <!--fim button-executa-container-->
+        </div>
+        <!--fim control-container-->
+    </div>
+    <!--fim global container-->
+
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <!-- <script src="https://square.github.io/cubism/cubism.v1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/d3.v5.min.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/horizon.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/highcharts.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/parallel-coordinates.js') }}"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/parallel_control.js') }}"></script>
+
+</body>
+
+</html>
